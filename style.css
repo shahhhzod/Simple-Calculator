@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  overflow: hidden;
+  background-color: #000000;
+}
+a {
+  text-decoration: none;
+  color: rgb(66, 107, 255);
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+#calculator {
+  width: 23rem;
+  background-color: #000000;
+  box-shadow: 0 0 24px 10px rgba(0, 0, 0, 0.3);
+}
+#display {
+  width: 100%;
+  min-height: 6rem;
+  overflow-wrap: break-word;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: right;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.row-con {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+.row-con > div {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  text-align: center;
+  line-height: 70px;
+  background-color: #333;
+  color: #fff;
+  font-weight: lighter;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  user-select: none;
+}
+.row-con > div:hover {
+  filter: brightness(120%);
+}
+.row-con > div:active {
+  filter: brightness(90%);
+}
+
+.cal-pad {
+  height: 25rem;
+}
+.item-eq {
+  background-color: #f69906 !important;
+  font-weight: normal;
+  grid-area: 4/4/6/4;
+}
+
+.item-eq:hover {
+  background-color: #f69906 !important;
+}
+.dark {
+  background-color: rgb(37, 37, 37) !important;
+}
+.dark:hover {
+  background-color: rgb(58, 58, 58) !important;
+}
+.dark {
+  font-family: digital;
+}
+span.type {
+  font-size: 3rem;
+  position: absolute;
+  right: 5px;
+  top: 30px;
+  transition: all 0.2s;
+}
+
+.active {
+  top: 0px !important;
+}
+
+span.result {
+  font-size: 1.4rem;
+  display: block;
+}
+.itemAC {
+  background-color: #9f9f9f !important;
+  color: #000000 !important;
+  font-family: 'Fira Sans', sans-serif;
+}
+.itemAC:hover {
+  background-color: #9f9f9f !important;
+}
+
+@media (max-width: 400px) {
+  #calculator {
+    width: 20rem;
+  }
+  .cal-pad {
+    height: 22rem;
+  }
+}
+@media (max-width: 300px) {
+  #calculator {
+    width: 15rem;
+  }
+  .cal-pad {
+    height: 18rem;
+  }
+}
